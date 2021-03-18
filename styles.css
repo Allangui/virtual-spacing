@@ -7,6 +7,10 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
 }
+.body {
+    height:100vh;
+    overflow: hidden;
+}
 a{
     text-decoration: none;
 }
@@ -43,6 +47,7 @@ header{
 .open{
     transform: translateY(0);
     height:100vh;
+    overflow: hidden;
 }
 .menu ul a{
     color:white;
