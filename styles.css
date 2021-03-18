@@ -33,12 +33,16 @@ header{
 }
 .menu{
     position:fixed;
-    transform: translateY(-200%);
-    transition: .5s;
+    transform: translateY(-100%);
     background: black;
     text-transform: uppercase;
     z-index: 100;
     width:100%;
+    transition: .0s;
+}
+.open{
+    transform: translateY(0);
+    height:100vh;
 }
 .menu ul a{
     color:white;

@@ -89,23 +89,25 @@
   let menu = document.querySelector('.menu');
   let burger = document.querySelector('.burger');
   let croix = document.querySelector('.close');
-  let value = 0;
+  let body = document.querySelector('body');
+
   burger.onclick = open; 
   croix.onclick = open; 
   
   function open() {
-    const height = window.innerHeight;
-
-    if (value === 0){
-      menu.style.transform= 'translateY(0)';
-      menu.style.height= height+'px';
-      value = 1;
-    }else{
-      menu.style.transform= 'translateY(-200%)';
-      value = 0;
+    menu.classList.toggle('open');
+    menu.style.transition = '.5s';
+    if(body.style.overflow === 'hidden'){
+    body.style.maxHeight = 'none';
+    body.style.overflow = '';
+    }else {
+    body.style.maxHeight = '100vh';
+    body.style.overflow = 'hidden';
     }
   }
-
+  window.onresize = function() {
+  menu.style.transition = '0s';
+}
 </script>
 </body>
 </html>
