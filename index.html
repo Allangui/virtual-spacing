@@ -11,12 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
 </head>
-<body >
+<body>
   <header>
       <div class="menu">
         <div class="top-flex">
           <img class="logo" src="images/logo.svg" alt="logo">
-          <img class="close" src="images/icon-close.svg" alt="croix">
+          <button type="button" class="close"></button>
+         <!--  <img class="close" src="images/icon-close.svg" alt="croix"> -->
         </div>
         <nav>
           <ul>       
@@ -30,7 +31,8 @@
       </div>
       <div class="top-flex">
         <img class="logo" src="images/logo.svg" alt="logo">
-        <img class="burger" src="images/icon-hamburger.svg" alt="burger">
+        <button type="button" class="burger"></button>
+        <!-- <img class="burger" src="images/icon-hamburger.svg" alt="burger">-->
       </div>
     <h1>Immersive experiences that deliver</h1>  
   </header>
@@ -83,7 +85,7 @@
 
   console.log(img);
   for (let i=0 ; i < img.length ; i++){
-    img[i].style.background= 'url(images/mobile/image'+ i + '.jpg) center center / cover no-repeat';
+    img[i].style.background= 'url(images/mobile/image'+ i + '.jpg) top center / cover no-repeat';
   }
 
   let menu = document.querySelector('.menu');
@@ -96,8 +98,14 @@
   
   function open() {
     menu.classList.toggle('open');
+    console.log(menu.className)
     menu.style.transition = '.5s';
-    body.classList.toggle('body');
+    if(menu.className.indexOf('open') === -1){
+    body.removeAttribute('style');
+    }else {
+    body.style.maxHeight = '100vh';
+    body.style.overflow = 'hidden';
+    }
   }
   window.onresize = function() {
   menu.style.transition = '0s';
