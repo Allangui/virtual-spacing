@@ -6,18 +6,17 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Loopstudios landing page</title>
+  <title>Virtual-spacing</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <header>
-      <div class="menu">
+      <div class="menu top-nav">
         <div class="top-flex">
           <img class="logo" src="images/logo.svg" alt="logo">
           <button type="button" class="close"></button>
-         <!--  <img class="close" src="images/icon-close.svg" alt="croix"> -->
         </div>
         <nav>
           <ul>       
@@ -29,10 +28,9 @@
           </ul>
         </nav>
       </div>
-      <div class="top-flex">
+      <div class="top-flex top-flex-mobile">
         <img class="logo" src="images/logo.svg" alt="logo">
         <button type="button" class="burger"></button>
-        <!-- <img class="burger" src="images/icon-hamburger.svg" alt="burger">-->
       </div>
     <h1>Immersive experiences that deliver</h1>  
   </header>
@@ -110,6 +108,20 @@
   window.onresize = function() {
   menu.style.transition = '0s';
 }
+
+
+
+  let mediaQuery = window.matchMedia('(min-width:800px)');
+  mediaQuery.addListener(change);
+  change(mediaQuery);
+
+  function change(){
+    if (mediaQuery.matches === true) {
+    console.log('coucou'); 
+  }else {
+    console.log('hello');
+    }
+  }
 </script>
 </body>
 </html>
