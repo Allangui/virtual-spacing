@@ -37,11 +37,13 @@
   
   <section class="sec1">
     <img class="interactive" src="images/mobile/image-interactive.jpg" alt="un homme">
-    <h2>The leader in interactive VR</h2>
-    <p class="para">Founded in 2011, Loopstudios has been producing world-class virtual reality 
-    projects for some of the best companies around the globe. Our award-winning 
-    creations have transformed businesses through digital experiences that bind 
-    to their brand.</p>
+    <div class = "sec1-grid">
+      <h2>The leader in interactive VR</h2>
+      <p class="para">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+      projects for some of the best companies around the globe. Our award-winning 
+      creations have transformed businesses through digital experiences that bind 
+      to their brand.</p>
+    </div>
   </section>
 
   <section class="sec2">
@@ -81,7 +83,6 @@
   let img = document.querySelectorAll('.images');
   
 
-  console.log(img);
   for (let i=0 ; i < img.length ; i++){
     img[i].style.background= 'url(images/mobile/image'+ i + '.jpg) top center / cover no-repeat';
   }
@@ -111,13 +112,14 @@
 
 
 
-  let mediaQuery = window.matchMedia('(min-width:800px)');
+  let mediaQuery = window.matchMedia('(min-width:975px)');
   mediaQuery.addListener(change);
   change(mediaQuery);
 
   function change(){
     if (mediaQuery.matches === true) {
     console.log('coucou'); 
+
   }else {
     console.log('hello');
     }
