@@ -20,11 +20,11 @@
         </div>
         <nav>
           <ul>       
-            <li><a href="#"> About</a></li>
-            <li><a href="#"> Careers</a></li>
-            <li><a href="#"> Events</a></li>
-            <li><a href="#"> Products</a></li>
-            <li><a href="#"> Support</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
           </ul>
         </nav>
       </div>
@@ -47,7 +47,10 @@
   </section>
 
   <section class="sec2">
-    <h2>Our creations</h2>
+    <div class="sec2-nav">
+      <h2>Our creations</h2>
+      <button class="btn-see" type="button">See all</button>
+    </div>
     <div class="grp-img">
       <div class="images">Deep <br> earth</div>
       <div class="images">Night<br> arcade</div>
@@ -64,11 +67,14 @@
   <footer>
     <nav class="bottom-nav">
       <img class="logo" src="images/logo.svg" alt="logo">
-      <a href="#">About</a>
-      <a href="#">Careers</a>
-      <a href="#">Events</a>
-      <a href="#">Products</a>
-      <a href="#">Support</a>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      
     </nav>
     <nav class="social">
       <img src="images/icon-facebook.svg" alt="facebook">
@@ -76,16 +82,12 @@
       <img src="images/icon-pinterest.svg" alt="pinterest">
       <img src="images/icon-instagram.svg" alt="instagram">
     </nav>
-    <div class="copyright">© 2021 Loopstudios. All rights reserved.</div> 
+    <div class="copyright">© 2021 Allan Guillotin. All rights reserved.</div> 
   </footer>
 
 <script>
   let img = document.querySelectorAll('.images');
   
-
-  for (let i=0 ; i < img.length ; i++){
-    img[i].style.background= 'url(images/mobile/image'+ i + '.jpg) top center / cover no-repeat';
-  }
 
   let menu = document.querySelector('.menu');
   let burger = document.querySelector('.burger');
@@ -97,7 +99,6 @@
   
   function open() {
     menu.classList.toggle('open');
-    console.log(menu.className)
     menu.style.transition = '.5s';
     if(menu.className.indexOf('open') === -1){
     body.removeAttribute('style');
@@ -118,12 +119,15 @@
 
   function change(){
     if (mediaQuery.matches === true) {
-    console.log('coucou'); 
-
+      for (let i=0 ; i < img.length ; i++){
+    img[i].style.background= 'url(images/desktop/image'+ i + '.jpg) center center / cover no-repeat';
+  }
   }else {
-    console.log('hello');
+    for (let i=0 ; i < img.length ; i++){
+    img[i].style.background= 'url(images/mobile/image'+ i + '.jpg) top center / cover no-repeat';
     }
   }
+}
 </script>
 </body>
 </html>
