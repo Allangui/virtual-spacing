@@ -15,8 +15,8 @@
   <header>
       <div class="menu top-nav">
         <div class="top-flex">
-          <img class="logo" src="images/logo.svg" alt="logo">
-          <button type="button" class="close"></button>
+          <img class="logo" src="images/logo.svg" alt="loopstudios">
+          <a> <button aria-label="close menu" type="button" class="close"></button></a>
         </div>
         <nav>
           <ul>       
@@ -29,8 +29,8 @@
         </nav>
       </div>
       <div class="top-flex top-flex-mobile">
-        <img class="logo" src="images/logo.svg" alt="logo">
-        <button type="button" class="burger"></button>
+        <img class="logo" src="images/logo.svg" alt="loopstudios">
+        <a><button aria-label="menu" type="button" class="burger"></button></a>
       </div>
     <h1>Immersive experiences that deliver</h1>  
   </header>
@@ -65,7 +65,7 @@
   </section>
 
   <footer>
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="footer">
       <img class="logo" src="images/logo.svg" alt="logo">
       <ul>
         <li><a href="#">About</a></li>
@@ -76,19 +76,17 @@
       </ul>
       
     </nav>
-    <nav class="social">
-      <img src="images/icon-facebook.svg" alt="facebook">
-      <img src="images/icon-twitter.svg" alt="twitter">
-      <img src="images/icon-pinterest.svg" alt="pinterest">
-      <img src="images/icon-instagram.svg" alt="instagram">
+    <nav class="social" aria-label="footer">
+      <a><img src="images/icon-facebook.svg" alt="facebook"></a>
+      <a><img src="images/icon-twitter.svg" alt="twitter"></a>
+      <a><img src="images/icon-pinterest.svg" alt="pinterest"></a>
+      <a><img src="images/icon-instagram.svg" alt="instagram"></a>
     </nav>
     <div class="copyright">© 2021 Allan Guillotin. All rights reserved.</div> 
   </footer>
 
 <script>
   let img = document.querySelectorAll('.images');
-  
-
   let menu = document.querySelector('.menu');
   let burger = document.querySelector('.burger');
   let croix = document.querySelector('.close');

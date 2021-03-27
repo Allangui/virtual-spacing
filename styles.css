@@ -98,8 +98,8 @@ h1{
 h2{
     text-transform: uppercase;
     text-align: center;
-    font-weight: 400;
-    font-size: 1.6rem;
+    font-weight: 700;
+    font-size: 2rem;
     word-spacing: .3rem;
 }
 .para{
@@ -185,7 +185,9 @@ footer{
 header{
     background: url(images/desktop/image-hero.jpg) center center /cover no-repeat;
     padding-left: min(150px,10vw);
-    box-shadow: inset 700px 0 100px rgba(0,0,0,.3);
+    box-shadow: inset 40vw 0 100px rgba(0,0,0,.3);
+    box-shadow: inset -40vw 0 100px rgba(0,0,0,.3);
+    padding-top:50px;
 }
 h1 {
     margin:150px 0 100px;
@@ -235,6 +237,7 @@ a{
     font-size: min(3vw,30px);
     align-items: center;
     font-size: 1.4rem;
+    font-weight: 700;
 }
 .menu ul li:last-child{
     margin-right:7vw;
@@ -280,7 +283,7 @@ font-size: 1vw;
     display:grid;
     grid-template-columns: repeat(4,auto) ;
     grid-template-rows: repeat(2,auto);
-    grid-gap: 10px;
+    grid-gap: 1vw;
     justify-content: space-between;
 }
 .images{
@@ -306,6 +309,7 @@ margin-bottom: 50px;
 .btn-see{
     display: none;
     cursor: pointer;
+    font-size: .8rem;
 }
 .btn-see:hover{
     background-color: black;
@@ -321,17 +325,19 @@ footer{
     display:grid;
     grid-template-columns:50% 50% ;
     grid-template-rows:75px 75px ;
+    padding-left: 17.5vw;
+    padding-right: 17.5vw;
 }
 .bottom-nav{
     grid-row: span 2;
 }
 .bottom-nav .logo{
-    margin : 50px 0 0 100px;
+    margin: 50px 0 0 0;
 }
 .bottom-nav ul {
     width: min(50%,360px);
     display: flex;
-    margin : auto 100px;
+    margin : auto 0;
     justify-content: space-between;
 
 }
@@ -346,13 +352,17 @@ margin-right: 20px;
     padding-bottom: 5px;
     cursor:pointer;
 }
-.social img:first-child{
-    margin-left: 100px;
+.social{
+    text-align: right;
 }
 .social img:hover{
     border-bottom: 3px solid white;
 }
 .copyright{
-    margin: auto 0;
+    margin: 0;
+    line-height:75px ;
+    text-align: right;
+    vertical-align: middle;
+
 }
 }
